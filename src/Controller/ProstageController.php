@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProstageController extends AbstractController
 {
     /**
-     * @Route("/prostage", name="prostage")
+     * @Route("/controleur", name="prostage")
      */
     public function index()
     {
@@ -16,4 +16,14 @@ class ProstageController extends AbstractController
             'controller_name' => 'ProstageController',
         ]);
     }
+
+    
+    /**
+     * @Route("/acceuil", name="prostage_acceuil")
+     */
+    public function acceuil()
+    {
+        return $this->render('prostage/acceuil.html.twig');
+    }
+
 }
