@@ -19,11 +19,19 @@ class ProstageController extends AbstractController
 
     
     /**
-     * @Route("/acceuil", name="prostage_acceuil")
+     * @Route("/", name="prostage_acceuil")
      */
     public function acceuil()
     {
         return $this->render('prostage/acceuil.html.twig');
+    }
+
+     /**
+     * @Route("/entreprises", name="prostage_entreprises")
+     */
+    public function entreprises()
+    {
+        return $this->render('prostage/entreprises.html.twig');
     }
 
 }
