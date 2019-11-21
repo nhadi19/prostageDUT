@@ -34,4 +34,11 @@ class ProstageController extends AbstractController
         return $this->render('prostage/entreprises.html.twig');
     }
 
+     /**
+     * @Route("/formations", name="prostage_formations")
+     */
+    public function formations()
+    {
+        return $this->render('prostage/formations.html.twig');
+    }
 }
