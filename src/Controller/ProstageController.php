@@ -6,18 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProstageController extends AbstractController
-{
-    /**
-     * @Route("/controleur", name="prostage")
-     */
-    public function index()
-    {
-        return $this->render('prostage/index.html.twig', [
-            'controller_name' => 'ProstageController',
-        ]);
-    }
-
-    
+{ 
     /**
      * @Route("/", name="prostage_acceuil")
      */
@@ -40,5 +29,13 @@ class ProstageController extends AbstractController
     public function formations()
     {
         return $this->render('prostage/formations.html.twig');
+    }
+
+     /**
+     * @Route("/stages/{id}", name="prostage_stages")
+     */
+    public function stages($id)
+    {
+        return $this->render('prostage/stages.html.twig',['idStage' => $id]);
     }
 }
