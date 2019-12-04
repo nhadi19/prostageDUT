@@ -10,7 +10,8 @@
         
         <!--CSS BLOCK -->
         {% block stylesheets %}
-         <link rel="stylesheet" href="{{asset /css/bootstrap.min.css}}">
+         <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
+         <link rel="stylesheet" href="{{asset('/css/fontello.css')}}">
         {% endblock %}
     </head>
     <body>
@@ -22,7 +23,7 @@
         
         <!--MENU BLOCK -->
         {% block menu %}
-        <h1>----------- MENU ----------</h1>
+        <h1>----------- MENU ---------- <i class="icon-menu-2"></i></h1>
         {% endblock %}
 
         <!--CONTENT BLOCK -->
