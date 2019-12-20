@@ -31,6 +31,11 @@ class Formation
      */
     private $nom;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Stage", inversedBy="formation")
+     */
+    private $stage;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Formation
     public function setNom(?string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getStage(): ?Stage
+    {
+        return $this->stage;
+    }
+
+    public function setStage(?Stage $stage): self
+    {
+        $this->stage = $stage;
 
         return $this;
     }
